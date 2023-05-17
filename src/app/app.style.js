@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -17,6 +17,14 @@ body {
   padding: 0;
 }
 
+:root {
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -25,14 +33,8 @@ body {
   width: 100%;
   height: 100%;
 
-  font-family: Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: ${({ theme }) => theme.font.regular };
-  line-height: 25px;
-  color: ${({ theme }) => theme.color.black};
-
-  background-color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.blackText};
+  background-color: ${({ theme }) => theme.color.white};
 }
 
 img {
@@ -119,21 +121,6 @@ button,
 }
 `;
 
-const AppWrapper = styled.div`
-  margin-top: 50px;
-  width: 280px;
-
-  border: 10px solid ${({theme}) => theme.color.greyCover};
-  outline: 3px outset ${({theme}) => theme.color.greyBorder};
-  background-color: ${({theme}) => theme.color.greyCover};
-
-  border-radius: 2px;
-
-`;
-
-
-
 export {
   GlobalStyle,
-  AppWrapper,
 };
