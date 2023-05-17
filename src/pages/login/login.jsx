@@ -7,20 +7,21 @@ const Login = () => {
 
   return(
     <S.LoginWrapper>
-      <S.LoginLogo src={Logo} alt="Chatify logo" />
-      <S.LoginText>Sign in to your Account</S.LoginText>
-      <form>
-        <LoginInput
-          labelName={LoginForm.idInstance.label}
-          formName={LoginForm.idInstance.forma}
-        />
-
-        <LoginInput
-          labelName={LoginForm.apiTokenInstance.label}
-          formName={LoginForm.apiTokenInstance.forma}
-        />
-        <S.LoginButton type="submit">Send message</S.LoginButton>
-      </form>
+      <S.LoginContent>
+        <S.LoginLogo src={Logo} alt="Chatify logo" />
+        <S.LoginText>Sign in to your Account</S.LoginText>
+        <S.LoginForm>
+          <LoginInput
+            labelName={LoginForm.idInstance.label}
+            formName={LoginForm.idInstance.forma}
+          />
+          <LoginInput
+            labelName={LoginForm.apiTokenInstance.label}
+            formName={LoginForm.apiTokenInstance.forma}
+          />
+          <S.LoginButton type="submit">Send message</S.LoginButton>
+        </S.LoginForm>
+      </S.LoginContent>
     </S.LoginWrapper>
   );
 };

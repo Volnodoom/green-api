@@ -5,7 +5,7 @@ const Input = styled.input`
   padding: 0.75em 0.6em;
 
   border-radius: 1.625em;
-  background-color: ${({theme, isShown}) => isShown ? theme.color.grey : 'transparent'};
+  background-color: ${({theme, isShown}) => isShown ? theme.color.greySecondary : 'transparent'};
   border: 1px solid ${({theme, isShown}) => isShown ? theme.color.border : theme.color.greySecondary};
 
 
@@ -20,6 +20,8 @@ const Input = styled.input`
 
   @media (min-width: 1100px) {
     width: 50%;
+    border: 1px solid ${({theme, isShown}) => isShown ? theme.color.border : theme.color.green};
+    background-color: ${({theme, isShown}) => isShown ? theme.color.whitePure : 'transparent'};
   }
 `;
 

@@ -11,7 +11,8 @@ const Label = styled.label`
 
   @media (min-width: 1100px) {
     position: static;
-    color: ${({theme}) => theme.color.grey};
+    color: ${({theme}) => theme.color.blackText};
+    opacity: 1;
     font-weight: 600;
     align-self: center;
   }
